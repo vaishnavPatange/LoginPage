@@ -26,9 +26,10 @@ namespace LoginPage
 
             app.UseAuthorization();
 
+            // Set LoginController.Index as the default route
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Login}/{action=Login}/{id?}");
 
             app.Run();
         }

@@ -5,7 +5,7 @@ namespace LoginPage.Controllers
 {
     public class LoginController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
@@ -36,6 +36,7 @@ namespace LoginPage.Controllers
             if(us.Count() == 1)
             {
                 ViewBag.message = "Login success";
+                ViewBag.user = u;
                 return View("LoginSuccess");
             }
             else
