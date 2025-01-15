@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 namespace LoginPage
 {
     public class Program
@@ -8,6 +9,11 @@ namespace LoginPage
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<Models.SchoolContext>(options =>
+            {
+                options.UseSqlServer("Server=VAISHNAV\\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;TrustCertificate=True");
+            });
 
             var app = builder.Build();
 
