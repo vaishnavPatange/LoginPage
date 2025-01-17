@@ -12,7 +12,7 @@ namespace LoginPage
 
             builder.Services.AddDbContext<Models.SchoolContext>(options =>
             {
-                options.UseSqlServer("Server=VAISHNAV\\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;TrustCertificate=True");
+                options.UseSqlServer("Server=VAISHNAV\\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;TrustServerCertificate=True");
             });
 
             var app = builder.Build();
